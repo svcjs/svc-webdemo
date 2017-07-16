@@ -1,0 +1,5 @@
+.*
+/coverage
+/test
+/node_modules
+my.webpack.server.config.js

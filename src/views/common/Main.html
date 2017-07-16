@@ -1,0 +1,23 @@
+<div class="btn-group btn-group-justified" style="position:absolute;left:0px;width:200px;top:0px;height:30px">
+    <div each="index, item in data.currentTopGroups"
+         class="btn-group btn-group-sm">
+        <button class="btn btn-warning {item.id==data.selectedTopGroup?'active':''}"
+                onclick="$this.selectTopGroup('{item.id}')">{item.name}
+        </button>
+    </div>
+</div>
+<div if="data.selectedTopGroup" class="list-group"
+     style="position:absolute;left:0px;width:200px;top:30px;bottom:0px;margin:0px;overflow-y:scroll;background: #32383e">
+    <button each="data.currentGroups" style="padding: 6px 10px;border: none"
+            onclick="$this.selectGroup('{item.id}')"
+            class="list-group-item {data.selectedGroup==item.id?'active':''}">
+        {item.name}
+    </button>
+</div>
+
+<div class="nav nav-tabs" style="position:absolute;left:200px;right:0px;top:0px;height:41px;border-bottom:1px solid #f60">
+    <li role="presentation" class="{data.subName=='score'?'active':''}"><a href="#/main/score">成绩</a></li>
+    <li role="presentation" class="{data.subName=='homework'?'active':''}"><a href="#/main/homework">作业</a></li>
+    <li role="presentation" class="{data.subName=='test'?'active':''}"><a href="#/main/test">考试</a></li>
+</div>
+<div id="SUBVIEW" style="background:#3e444c;position:absolute;left:200px;right:0px;top:35px;bottom:0px;overflow-y:scroll"></div>

@@ -1,0 +1,33 @@
+{
+  "name": "svc-webdemo",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "build": "rm -rf dist && webpack",
+    "build-min": "uglifyjs ./dist/index.js -o ./dist/index.min.js -c warnings=false -m && cd dist && mv index.html index.src.html && sed 's#index.js#index.min.js#' index.src.html > index.html && rm -f index.src.html index.js",
+    "dev": "webpack-dev-server --content-base=dist --inline --hot --config=webpack.server.config.js",
+    "dev-my": "webpack-dev-server --content-base=dist --inline --hot --config=my.webpack.server.config.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "bootswatch": "^3.3.7",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.4",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.29.0",
+    "md5": "^2.2.1",
+    "sha1": "^1.1.1",
+    "style-loader": "^0.18.2",
+    "svc-action": "0.1.1",
+    "svc-state": "0.1.1",
+    "svc-storage": "0.1.1",
+    "svc-web": "0.1.1",
+    "uglifyjs": "^2.4.11",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.1"
+  },
+  "dependencies": {}
+}
