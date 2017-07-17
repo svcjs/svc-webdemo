@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+// var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var config = {
 
@@ -18,12 +18,12 @@ var config = {
     }
   },
 
-  // externals: [{
-  //   'svc-action': 'svcAction',
-  //   'svc-state': 'svcState',
-  //   'svc-storage': 'svcStorage',
-  //   'svc-web': 'svcWeb'
-  // }],
+  externals: [{
+    'svc-action': 'svcAction',
+    'svc-state': 'svcState',
+    'svc-storage': 'svcStorage',
+    'svc-web': 'svcWeb'
+  }],
 
   plugins: [
     new CopyWebpackPlugin([

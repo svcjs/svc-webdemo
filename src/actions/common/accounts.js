@@ -44,7 +44,7 @@ module.exports = {
     resolve()
   },
 
-  logout: function ({http, resolve, reject}, {}) {
+  logout: function ({resolve, reject}, {}) {
     storage.set({
       accountId: null,
       accountSecret: null

@@ -38,7 +38,7 @@ module.exports = {
       type: 'string'
     },
   },
-  getGroups: function ({http, states, resolve, reject}, {topGroup}) {
+  getGroups: function ({states, resolve, reject}, {topGroup}) {
     states.set('currentGroups', _groups[topGroup])
     resolve()
   },

@@ -1,4 +1,4 @@
-import { states, storage, actions, route, http, tpl } from 'lib/service'
+import { states, actions } from 'lib/service'
 import Result from '../demo/Result'
 
 export default class {

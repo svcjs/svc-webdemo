@@ -1,18 +1,12 @@
-import { states, storage, actions, route, http } from 'lib/service'
+import { states, actions, route } from 'lib/service'
 import Login from './views/common/Login'
 import Main from './views/common/Main'
 import accountActions from './actions/common/accounts'
 import groupActions from './actions/demo/groups'
-// import appleActions from './actions/demo/apples'
-// import orangeActions from './actions/demo/oranges'
-// import bananaActions from './actions/demo/bananas'
 
 // 注册服务
 actions.register('accounts', accountActions);
 actions.register('groups', groupActions);
-// actions.register('apples', appleActions);
-// actions.register('oranges', orangeActions);
-// actions.register('bananas', bananaActions);
 
 // 选择器
 window.$ = function (selector) {

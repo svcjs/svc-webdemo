@@ -1,4 +1,4 @@
-import { states, storage, actions, route, http, tpl } from 'lib/service'
+import { storage, actions } from 'lib/service'
 
 export default class {
   constructor () {
@@ -14,10 +14,10 @@ export default class {
 
   login () {
     actions.call('accounts.login', {account: this.$('[name=account]').value, password: this.$('[name=password]').value})
-      .then(()=>{
+      .then(() => {
         this.$('[name=password]').value = ''
-      }).catch((err)=>{
-        this.setData({error: err.message})
+      }).catch((err) => {
+      this.setData({error: err.message})
     })
   }
 

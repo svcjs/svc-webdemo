@@ -1,5 +1,3 @@
-import { states, storage, actions, route, http, tpl } from 'lib/service'
-
 export default class {
   constructor (title) {
     this.html = require('./Result.html')
