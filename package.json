@@ -24,7 +24,7 @@
     "svc-action": "0.1.1",
     "svc-state": "0.1.1",
     "svc-storage": "0.1.1",
-    "svc-web": "0.1.1",
+    "svc-web": "0.1.2",
     "uglifyjs": "^2.4.11",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.1"

@@ -18,12 +18,12 @@ var config = {
     }
   },
 
-  externals: [{
-    'svc-action': 'svcAction',
-    'svc-state': 'svcState',
-    'svc-storage': 'svcStorage',
-    'svc-web': 'svcWeb'
-  }],
+  // externals: [{
+  //   'svc-action': 'svcAction',
+  //   'svc-state': 'svcState',
+  //   'svc-storage': 'svcStorage',
+  //   'svc-web': 'svcWeb'
+  // }],
 
   plugins: [
     new CopyWebpackPlugin([
